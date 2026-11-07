@@ -1,0 +1,719 @@
+{
+  "source": "https://bjcrum.com",
+  "exportedAt": "2026-10-06T12:11:49.978Z",
+  "records": [
+    {
+      "url": "https://bjcrum.com/css/export.css",
+      "file": "public/css/export.css",
+      "bytes": 261496,
+      "contentType": "text/css; charset=utf-8",
+      "sha256": "cd4c9f6b2dc1feff14d8c3f04add2b022a1d0b13a876e427552d566e4d5c4c97"
+    },
+    {
+      "url": "https://bjcrum.com/css/legal.css",
+      "file": "public/css/legal.css",
+      "bytes": 9582,
+      "contentType": "text/css; charset=utf-8",
+      "sha256": "50102f98f7b6c34a9d99a9f7931b6d53be4e0dfbf2c13b051587b91872a9c36f"
+    },
+    {
+      "url": "https://bjcrum.com/css/polish.css",
+      "file": "public/css/polish.css",
+      "bytes": 19617,
+      "contentType": "text/css; charset=utf-8",
+      "sha256": "28786dc20593c65e9649d15b0c112b62870012f553ce2e38c3ea875c03a8dc1f"
+    },
+    {
+      "url": "https://bjcrum.com/css/product-tour.css",
+      "file": "public/css/product-tour.css",
+      "bytes": 6412,
+      "contentType": "text/css; charset=utf-8",
+      "sha256": "6aa477e6743c48675d1255e9f466f28ecde285ce301430693e020ef8a244e7fb"
+    },
+    {
+      "url": "https://bjcrum.com/css/site.css",
+      "file": "public/css/site.css",
+      "bytes": 20084,
+      "contentType": "text/css; charset=utf-8",
+      "sha256": "f6d1f23e1b61c1ccde8057ba0dd21f30c5f369d1a36ae01cd74030e75bc2e4ce"
+    },
+    {
+      "url": "https://bjcrum.com/css/why.css",
+      "file": "public/css/why.css",
+      "bytes": 10017,
+      "contentType": "text/css; charset=utf-8",
+      "sha256": "804997942a31017987aed2ad96962ad5acda15bb828a4c1992f10d01a9a079f2"
+    },
+    {
+      "url": "https://bjcrum.com/fonts/0E7IMbDzcGABpBwwqNEt60wU0w.woff2",
+      "file": "public/fonts/0E7IMbDzcGABpBwwqNEt60wU0w.woff2",
+      "bytes": 7540,
+      "contentType": "font/woff2",
+      "sha256": "349420a3accf34ce219764a6eca2728b555ecdd993053844d1696583bb74e4c5"
+    },
+    {
+      "url": "https://bjcrum.com/fonts/1c3801e5_33ZCUAC3GU2QVDMGY6EP3BNWHET5IUK4.woff2",
+      "file": "public/fonts/1c3801e5_33ZCUAC3GU2QVDMGY6EP3BNWHET5IUK4.woff2",
+      "bytes": 53484,
+      "contentType": "font/woff2",
+      "sha256": "ec7ec8194f75646c3ac13197982427086107a15c198ca24af7d02fb8273fd2f9"
+    },
+    {
+      "url": "https://bjcrum.com/fonts/1K3W8DizY3v4emK8Mb08YHxTbs.woff2",
+      "file": "public/fonts/1K3W8DizY3v4emK8Mb08YHxTbs.woff2",
+      "bytes": 4628,
+      "contentType": "font/woff2",
+      "sha256": "9bed92e963c634e32445ddc792d62180fb8498a10d3f7c20a1e8d1e7de17adc4"
+    },
+    {
+      "url": "https://bjcrum.com/fonts/2A4Xx7CngadFGlVV4xrO06OBHY.woff2",
+      "file": "public/fonts/2A4Xx7CngadFGlVV4xrO06OBHY.woff2",
+      "bytes": 4236,
+      "contentType": "font/woff2",
+      "sha256": "95a9e62cbe6b9d4c96b95bced1594c619d2e9b99793cd948bdd0a607e7ebd4f1"
+    },
+    {
+      "url": "https://bjcrum.com/fonts/35a329ec_tDbY2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKxTNFOVgaY.woff2",
+      "file": "public/fonts/35a329ec_tDbY2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKxTNFOVgaY.woff2",
+      "bytes": 7336,
+      "contentType": "font/woff2",
+      "sha256": "505dfba8ecbe77e82765f36d317ed7ef4ac42719dc5f4ae68d1c483fd22d0d14"
+    },
+    {
+      "url": "https://bjcrum.com/fonts/3ebb4477_3y9U6as8bTXq_nANBjzKo3IeZx8z6up5BeSl5jBNz_19PpbpMXuECpwUxJBOm_OJWiaaD30YfKfjZZoL.woff2",
+      "file": "public/fonts/3ebb4477_3y9U6as8bTXq_nANBjzKo3IeZx8z6up5BeSl5jBNz_19PpbpMXuECpwUxJBOm_OJWiaaD30YfKfjZZoL.woff2",
+      "bytes": 37568,
+      "contentType": "font/woff2",
+      "sha256": "de60e6cb83fa1f2c838c5e8f8810f387131af502c46ae6c3c2f65d6f2fa102d8"
+    },
+    {
+      "url": "https://bjcrum.com/fonts/43sJ6MfOPh1LCJt46OvyDuSbA6o.woff2",
+      "file": "public/fonts/43sJ6MfOPh1LCJt46OvyDuSbA6o.woff2",
+      "bytes": 4960,
+      "contentType": "font/woff2",
+      "sha256": "7f9d8e2207cc6b4bd89c20cef9742c05f04093aa8d2a92b1d0c4bf93663145af"
+    },
+    {
+      "url": "https://bjcrum.com/fonts/4RAEQdEOrcnDkhHiiCbJOw92Lk.woff2",
+      "file": "public/fonts/4RAEQdEOrcnDkhHiiCbJOw92Lk.woff2",
+      "bytes": 7080,
+      "contentType": "font/woff2",
+      "sha256": "09d4eb010bb9140289383ee337ac5775b8caf7a830113cfbb071134bf2a354cb"
+    },
+    {
+      "url": "https://bjcrum.com/fonts/5A3Ce6C9YYmCjpQx9M4inSaKU.woff2",
+      "file": "public/fonts/5A3Ce6C9YYmCjpQx9M4inSaKU.woff2",
+      "bytes": 8956,
+      "contentType": "font/woff2",
+      "sha256": "5c1619dc61ac73f6beff6e0de9d88567b9cf875b0ba5dad61f4cc0965c217686"
+    },
+    {
+      "url": "https://bjcrum.com/fonts/5f2afa72_tDbY2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKxTN1OVgaY.woff2",
+      "file": "public/fonts/5f2afa72_tDbY2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKxTN1OVgaY.woff2",
+      "bytes": 1160,
+      "contentType": "font/woff2",
+      "sha256": "5f4292eb92ca542e9f60048ca72832d0183b1a06e5d7bcfeed16f9be9ebb4018"
+    },
+    {
+      "url": "https://bjcrum.com/fonts/5vvr9Vy74if2I6bQbJvbw7SY1pQ.woff2",
+      "file": "public/fonts/5vvr9Vy74if2I6bQbJvbw7SY1pQ.woff2",
+      "bytes": 8896,
+      "contentType": "font/woff2",
+      "sha256": "68cf5b575705c54b915a806a6666344a65b010388b588311629a8009af66b87a"
+    },
+    {
+      "url": "https://bjcrum.com/fonts/6mJuEAguuIuMog10gGvH5d3cl8.woff2",
+      "file": "public/fonts/6mJuEAguuIuMog10gGvH5d3cl8.woff2",
+      "bytes": 4644,
+      "contentType": "font/woff2",
+      "sha256": "7c03fe0fd6cc9d3a1a4e617b199560466301adac078846525211898f245028b4"
+    },
+    {
+      "url": "https://bjcrum.com/fonts/78a8473e_3y9U6as8bTXq_nANBjzKo3IeZx8z6up5BeSl5jBNz_19PpbpMXuECpwUxJBOm_OJWiaaD30YfKfjZZoL.woff2",
+      "file": "public/fonts/78a8473e_3y9U6as8bTXq_nANBjzKo3IeZx8z6up5BeSl5jBNz_19PpbpMXuECpwUxJBOm_OJWiaaD30YfKfjZZoL.woff2",
+      "bytes": 37860,
+      "contentType": "font/woff2",
+      "sha256": "a46026231c5c70ba10790e09619421a7c6344c07997b4bb8d43317b456f22c00"
+    },
+    {
+      "url": "https://bjcrum.com/fonts/867QObYax8ANsfX4TGEVU9YiCM.woff2",
+      "file": "public/fonts/867QObYax8ANsfX4TGEVU9YiCM.woff2",
+      "bytes": 7408,
+      "contentType": "font/woff2",
+      "sha256": "35f2295aefa1828e2eb026527d9e946eac60c726f06f66a9b61d047a8183c30a"
+    },
+    {
+      "url": "https://bjcrum.com/fonts/8d6c37cb_tDbY2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKxTOlOV.woff2",
+      "file": "public/fonts/8d6c37cb_tDbY2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKxTOlOV.woff2",
+      "bytes": 21168,
+      "contentType": "font/woff2",
+      "sha256": "14425ba9c695763c1547f48a206b7aa60350a33ae23de09f0407877f3fcd89eb"
+    },
+    {
+      "url": "https://bjcrum.com/fonts/A0Wcc7NgXMjUuFdquHDrIZpzZw0.woff2",
+      "file": "public/fonts/A0Wcc7NgXMjUuFdquHDrIZpzZw0.woff2",
+      "bytes": 4316,
+      "contentType": "font/woff2",
+      "sha256": "d216c9ebfd1b8bf2416a810afe222f88de9268944b6bbacad5e5f05f6734fd6b"
+    },
+    {
+      "url": "https://bjcrum.com/fonts/ad4f6d0b_tDbY2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKxTOVOVgaY.woff2",
+      "file": "public/fonts/ad4f6d0b_tDbY2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKxTOVOVgaY.woff2",
+      "bytes": 4228,
+      "contentType": "font/woff2",
+      "sha256": "365b7a8eaff022b13ed0561fde3890a04a30507d773ecd5adb3aca8e766a285c"
+    },
+    {
+      "url": "https://bjcrum.com/fonts/b6Y37FthZeALduNqHicBT6FutY.woff2",
+      "file": "public/fonts/b6Y37FthZeALduNqHicBT6FutY.woff2",
+      "bytes": 4168,
+      "contentType": "font/woff2",
+      "sha256": "f2207c07c5ac395d1d8c33f46655ded6aea7e66269431e3f943693c0318441dc"
+    },
+    {
+      "url": "https://bjcrum.com/fonts/be754753_3y9U6as8bTXq_nANBjzKo3IeZx8z6up5BeSl5jBNz_19PpbpMXuECpwUxJBOm_OJWiaaD30YfKfjZZoL.woff2",
+      "file": "public/fonts/be754753_3y9U6as8bTXq_nANBjzKo3IeZx8z6up5BeSl5jBNz_19PpbpMXuECpwUxJBOm_OJWiaaD30YfKfjZZoL.woff2",
+      "bytes": 37912,
+      "contentType": "font/woff2",
+      "sha256": "c0ab485b8f1bcb09893a3d6e90200e24349ff34e81a496118943655aacfb5568"
+    },
+    {
+      "url": "https://bjcrum.com/fonts/Bo5CNzBv77CafbxOtKIkpw9egw.woff2",
+      "file": "public/fonts/Bo5CNzBv77CafbxOtKIkpw9egw.woff2",
+      "bytes": 30244,
+      "contentType": "font/woff2",
+      "sha256": "59b58c05f419ceb027c1cd1052c24505846ef338ae3bff2bfa7f8ce9d78e6186"
+    },
+    {
+      "url": "https://bjcrum.com/fonts/cdAe8hgZ1cMyLu9g005pAW3xMo.woff2",
+      "file": "public/fonts/cdAe8hgZ1cMyLu9g005pAW3xMo.woff2",
+      "bytes": 7228,
+      "contentType": "font/woff2",
+      "sha256": "b5fc8863a07b6cca6a5cb4961a749a8353ea1b910498c7d5a5713d34e0186167"
+    },
+    {
+      "url": "https://bjcrum.com/fonts/CfMzU8w2e7tHgF4T4rATMPuWosA.woff2",
+      "file": "public/fonts/CfMzU8w2e7tHgF4T4rATMPuWosA.woff2",
+      "bytes": 9500,
+      "contentType": "font/woff2",
+      "sha256": "c27061722a1d68ddf9ff8767d7f434058e56bbd2ff6a9188b1215a44a75fbda3"
+    },
+    {
+      "url": "https://bjcrum.com/fonts/cRJyLNuTJR5jbyKzGi33wU9cqIQ.woff2",
+      "file": "public/fonts/cRJyLNuTJR5jbyKzGi33wU9cqIQ.woff2",
+      "bytes": 26280,
+      "contentType": "font/woff2",
+      "sha256": "67b2070d1aae1ab7129d7c7558a07a0dd850b99ba0ec4f938cb03d41698a9d93"
+    },
+    {
+      "url": "https://bjcrum.com/fonts/df97e455_tDbY2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKxTPlOVgaY.woff2",
+      "file": "public/fonts/df97e455_tDbY2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKxTPlOVgaY.woff2",
+      "bytes": 5328,
+      "contentType": "font/woff2",
+      "sha256": "522f5827308102a9c0ea7860b5a11306043610ecf03d150ba32056a06e8c56e2"
+    },
+    {
+      "url": "https://bjcrum.com/fonts/DOfvtmE1UplCq161m6Hj8CSQYg.woff2",
+      "file": "public/fonts/DOfvtmE1UplCq161m6Hj8CSQYg.woff2",
+      "bytes": 26696,
+      "contentType": "font/woff2",
+      "sha256": "236c5e2c38b6d82dd2b4258d6bf24b179dabbcafcb16e845ad7e677332b72882"
+    },
+    {
+      "url": "https://bjcrum.com/fonts/DolVirEGb34pEXEp8t8FQBSK4.woff2",
+      "file": "public/fonts/DolVirEGb34pEXEp8t8FQBSK4.woff2",
+      "bytes": 4288,
+      "contentType": "font/woff2",
+      "sha256": "bbd985c4dabfdca96b510aecc70cfd44371e0589a6f8522cbc119eeb6ee7aac2"
+    },
+    {
+      "url": "https://bjcrum.com/fonts/DpPBYI0sL4fYLgAkX8KXOPVt7c.woff2",
+      "file": "public/fonts/DpPBYI0sL4fYLgAkX8KXOPVt7c.woff2",
+      "bytes": 8892,
+      "contentType": "font/woff2",
+      "sha256": "305cc030ada673760c59e4f4ffac736ace0478598d957102c5574ab0b079f69e"
+    },
+    {
+      "url": "https://bjcrum.com/fonts/e53a95a9_tDbY2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKxTNVOVgaY.woff2",
+      "file": "public/fonts/e53a95a9_tDbY2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKxTNVOVgaY.woff2",
+      "bytes": 3924,
+      "contentType": "font/woff2",
+      "sha256": "efc9e0df126ca6dd1c37a022bfe1d664d23b3fcaa32979d2028ecb4c074306c8"
+    },
+    {
+      "url": "https://bjcrum.com/fonts/EOr0mi4hNtlgWNn9if640EZzXCo.woff2",
+      "file": "public/fonts/EOr0mi4hNtlgWNn9if640EZzXCo.woff2",
+      "bytes": 7116,
+      "contentType": "font/woff2",
+      "sha256": "af9fa49a46e2b4bb090462e8222f43b426593ce31aca150401aa8ebf5c5b5929"
+    },
+    {
+      "url": "https://bjcrum.com/fonts/GIryZETIX4IFypco5pYZONKhJIo.woff2",
+      "file": "public/fonts/GIryZETIX4IFypco5pYZONKhJIo.woff2",
+      "bytes": 4268,
+      "contentType": "font/woff2",
+      "sha256": "c0d105ab64a098680ba890a66228a54c03533d907c2812be8f09740772b6d349"
+    },
+    {
+      "url": "https://bjcrum.com/fonts/GrgcKwrN6d3Uz8EwcLHZxwEfC4.woff2",
+      "file": "public/fonts/GrgcKwrN6d3Uz8EwcLHZxwEfC4.woff2",
+      "bytes": 27380,
+      "contentType": "font/woff2",
+      "sha256": "362b168da82d69bc67d2a358fa20c59151cb4ceac8a5506be6baef5e6827fa42"
+    },
+    {
+      "url": "https://bjcrum.com/fonts/H89BbHkbHDzlxZzxi8uPzTsp90.woff2",
+      "file": "public/fonts/H89BbHkbHDzlxZzxi8uPzTsp90.woff2",
+      "bytes": 9564,
+      "contentType": "font/woff2",
+      "sha256": "0648a0666c626b3afc7ebfd187e3704cfd4b1fa4d7f774a08af01236101daab9"
+    },
+    {
+      "url": "https://bjcrum.com/fonts/hyOgCu0Xnghbimh0pE8QTvtt2AU.woff2",
+      "file": "public/fonts/hyOgCu0Xnghbimh0pE8QTvtt2AU.woff2",
+      "bytes": 8908,
+      "contentType": "font/woff2",
+      "sha256": "006a424a150e913ff0b7d2c43c29cd3810628811bd686cf5cdd1391239cda123"
+    },
+    {
+      "url": "https://bjcrum.com/fonts/ia3uin3hQWqDrVloC1zEtYHWw.woff2",
+      "file": "public/fonts/ia3uin3hQWqDrVloC1zEtYHWw.woff2",
+      "bytes": 30368,
+      "contentType": "font/woff2",
+      "sha256": "f24b0a0d59c1e80a82529f28543ca51c305288570600e326f73cd98963d2afb8"
+    },
+    {
+      "url": "https://bjcrum.com/fonts/JEXmejW8mXOYMtt0hyRg811kHac.woff2",
+      "file": "public/fonts/JEXmejW8mXOYMtt0hyRg811kHac.woff2",
+      "bytes": 27812,
+      "contentType": "font/woff2",
+      "sha256": "7f871b6f0d6a4f6b34bc885f37cce02f65dcc79adea50341371f5c9b2bd67ca9"
+    },
+    {
+      "url": "https://bjcrum.com/fonts/JeYwfuaPfZHQhEG8U5gtPDZ7WQ.woff2",
+      "file": "public/fonts/JeYwfuaPfZHQhEG8U5gtPDZ7WQ.woff2",
+      "bytes": 25348,
+      "contentType": "font/woff2",
+      "sha256": "88f8b52e9e88c8334d8a644d652c94df6bdf25c836729609e9a8f83d35189d11"
+    },
+    {
+      "url": "https://bjcrum.com/fonts/khkJkwSL66WFg8SX6Wa726c.woff2",
+      "file": "public/fonts/khkJkwSL66WFg8SX6Wa726c.woff2",
+      "bytes": 9600,
+      "contentType": "font/woff2",
+      "sha256": "514435f5cc4cdd2b8b6d961d8f2dbb034e6a7c9569bb46c2ed16fa8552ec7a8e"
+    },
+    {
+      "url": "https://bjcrum.com/fonts/lEJLP4R0yuCaMCjSXYHtJw72M.woff2",
+      "file": "public/fonts/lEJLP4R0yuCaMCjSXYHtJw72M.woff2",
+      "bytes": 6668,
+      "contentType": "font/woff2",
+      "sha256": "c685cdd073fe381a7ce1e038e608746ef59ba8fead0b648dc3d04f2bc1862a8a"
+    },
+    {
+      "url": "https://bjcrum.com/fonts/NeGmSOXrPBfEFIy5YZeHq17LEDA.woff2",
+      "file": "public/fonts/NeGmSOXrPBfEFIy5YZeHq17LEDA.woff2",
+      "bytes": 7152,
+      "contentType": "font/woff2",
+      "sha256": "3c00a1758c84c1133ebd5a00272c8a397e0db7120537d0342cd5aca878946e38"
+    },
+    {
+      "url": "https://bjcrum.com/fonts/NTJ0nQgIF0gcDelS14zQ9NR9Q.woff2",
+      "file": "public/fonts/NTJ0nQgIF0gcDelS14zQ9NR9Q.woff2",
+      "bytes": 4932,
+      "contentType": "font/woff2",
+      "sha256": "29211dd19df9eef7e33ba72f322f9c3c75c33fe5594fbba8d866c038e96273cf"
+    },
+    {
+      "url": "https://bjcrum.com/fonts/otTaNuNpVK4RbdlT7zDDdKvQBA.woff2",
+      "file": "public/fonts/otTaNuNpVK4RbdlT7zDDdKvQBA.woff2",
+      "bytes": 26264,
+      "contentType": "font/woff2",
+      "sha256": "6a45c62c6dcac1312a9af0c5662adb1d1806dcd0c30177a89cbb4a7a7680343f"
+    },
+    {
+      "url": "https://bjcrum.com/fonts/oYaAX5himiTPYuN8vLWnqBbfD2s.woff2",
+      "file": "public/fonts/oYaAX5himiTPYuN8vLWnqBbfD2s.woff2",
+      "bytes": 4660,
+      "contentType": "font/woff2",
+      "sha256": "32ee785f268b036ad1200d4a8c6ba94b5a542e97e4cb438ef54c6da731aeb399"
+    },
+    {
+      "url": "https://bjcrum.com/fonts/Oyn2ZbENFdnW7mt2Lzjk1h9Zb9k.woff2",
+      "file": "public/fonts/Oyn2ZbENFdnW7mt2Lzjk1h9Zb9k.woff2",
+      "bytes": 4756,
+      "contentType": "font/woff2",
+      "sha256": "e4c1617fc03c70ebd01de8794e138ffd118a0a1965c2bbd74eb85bfbac35cadb"
+    },
+    {
+      "url": "https://bjcrum.com/fonts/OYrD2tBIBPvoJXiIHnLoOXnY9M.woff2",
+      "file": "public/fonts/OYrD2tBIBPvoJXiIHnLoOXnY9M.woff2",
+      "bytes": 6652,
+      "contentType": "font/woff2",
+      "sha256": "3d9aaa88875ebe3c7140cc0a43dfd88f844008e24720bb5095157b66c3a15a52"
+    },
+    {
+      "url": "https://bjcrum.com/fonts/pKRFNWFoZl77qYCAIp84lN1h944.woff2",
+      "file": "public/fonts/pKRFNWFoZl77qYCAIp84lN1h944.woff2",
+      "bytes": 29380,
+      "contentType": "font/woff2",
+      "sha256": "54310e32e0595e3f6d7de1f723fedd662e71e8d2783bd6742b0a4b7458a22d7e"
+    },
+    {
+      "url": "https://bjcrum.com/fonts/QrcNhgEPfRl0LS8qz5Ln8olanl8.woff2",
+      "file": "public/fonts/QrcNhgEPfRl0LS8qz5Ln8olanl8.woff2",
+      "bytes": 7332,
+      "contentType": "font/woff2",
+      "sha256": "c91d16d8ffe76b53926479ea53fced5acf5efe67defb3f4213dad33274f24291"
+    },
+    {
+      "url": "https://bjcrum.com/fonts/Qx95Xyt0Ka3SGhinnbXIGpEIyP4.woff2",
+      "file": "public/fonts/Qx95Xyt0Ka3SGhinnbXIGpEIyP4.woff2",
+      "bytes": 7176,
+      "contentType": "font/woff2",
+      "sha256": "335e2d5d8dd32e517ff32559e2aa78d1fef8cfabf8d95d4a83e1ef7bd6b98a76"
+    },
+    {
+      "url": "https://bjcrum.com/fonts/syRNPWzAMIrcJ3wIlPIP43KjQs.woff2",
+      "file": "public/fonts/syRNPWzAMIrcJ3wIlPIP43KjQs.woff2",
+      "bytes": 27900,
+      "contentType": "font/woff2",
+      "sha256": "fad48f71e77d72b44122a1d978820a7e7215b84f9a9c0e3a31d97d5987a710e9"
+    },
+    {
+      "url": "https://bjcrum.com/fonts/tKtBcDnBMevsEEJKdNGhhkLzYo.woff2",
+      "file": "public/fonts/tKtBcDnBMevsEEJKdNGhhkLzYo.woff2",
+      "bytes": 4052,
+      "contentType": "font/woff2",
+      "sha256": "21cdc19e523abd29a66a53b3f459fe741b855f8308d79964ed3638b6f9356dcc"
+    },
+    {
+      "url": "https://bjcrum.com/fonts/tUSCtfYVM1I1IchuyCwz9gDdQ.woff2",
+      "file": "public/fonts/tUSCtfYVM1I1IchuyCwz9gDdQ.woff2",
+      "bytes": 6672,
+      "contentType": "font/woff2",
+      "sha256": "43cf206edf89348171df529aac13738dd2155528d009cb72ef283390623058bd"
+    },
+    {
+      "url": "https://bjcrum.com/fonts/u6gJwDuwB143kpNK1T1MDKDWkMc.woff2",
+      "file": "public/fonts/u6gJwDuwB143kpNK1T1MDKDWkMc.woff2",
+      "bytes": 7556,
+      "contentType": "font/woff2",
+      "sha256": "a83d6869a7a608286201edcfdb78bcfbc0a673c6074d16b3e144bd63f42434a3"
+    },
+    {
+      "url": "https://bjcrum.com/fonts/UjlFhCnUjxhNfep4oYBPqnEssyo.woff2",
+      "file": "public/fonts/UjlFhCnUjxhNfep4oYBPqnEssyo.woff2",
+      "bytes": 27996,
+      "contentType": "font/woff2",
+      "sha256": "216fcca1239e2ce6a2cc6009eac87e7a90ae36e3e0bf1992fdf712f83f58ef06"
+    },
+    {
+      "url": "https://bjcrum.com/fonts/uy9s0iWuxiNnVt8EpTI3gzohpwo.woff2",
+      "file": "public/fonts/uy9s0iWuxiNnVt8EpTI3gzohpwo.woff2",
+      "bytes": 4220,
+      "contentType": "font/woff2",
+      "sha256": "01e79b4469c586e885aa94af8c42cb734da7b4fc40aefba364a346cdf2039827"
+    },
+    {
+      "url": "https://bjcrum.com/fonts/VgYFWiwsAC5OYxAycRXXvhze58.woff2",
+      "file": "public/fonts/VgYFWiwsAC5OYxAycRXXvhze58.woff2",
+      "bytes": 26076,
+      "contentType": "font/woff2",
+      "sha256": "3f6cafab2760e6bd3f59cefde6e45b14e57b8d05d0e63dd30b2e5927e848dab0"
+    },
+    {
+      "url": "https://bjcrum.com/fonts/wccHG0r4gBDAIRhfHiOlq6oEkqw.woff2",
+      "file": "public/fonts/wccHG0r4gBDAIRhfHiOlq6oEkqw.woff2",
+      "bytes": 7360,
+      "contentType": "font/woff2",
+      "sha256": "992c5fd3bac230fa179ce0d63f6c032bc08d28678771173cb057e91d0cdde997"
+    },
+    {
+      "url": "https://bjcrum.com/fonts/WZ367JPwf9bRW6LdTHN8rXgSjw.woff2",
+      "file": "public/fonts/WZ367JPwf9bRW6LdTHN8rXgSjw.woff2",
+      "bytes": 27736,
+      "contentType": "font/woff2",
+      "sha256": "e38dae845a9fcdd07cf1728744263315aa3226f0bbb9dc53b3bd533ca245b034"
+    },
+    {
+      "url": "https://bjcrum.com/fonts/xYYWaj7wCU5zSQH0eXvSaS19wo.woff2",
+      "file": "public/fonts/xYYWaj7wCU5zSQH0eXvSaS19wo.woff2",
+      "bytes": 6676,
+      "contentType": "font/woff2",
+      "sha256": "e207ee8db856b70ffdd9e3aeb2685f92177d10800c4c274ef27da9934c180761"
+    },
+    {
+      "url": "https://bjcrum.com/fonts/Y9k9QrlZAqio88Klkmbd8VoMQc.woff2",
+      "file": "public/fonts/Y9k9QrlZAqio88Klkmbd8VoMQc.woff2",
+      "bytes": 4504,
+      "contentType": "font/woff2",
+      "sha256": "8d68edfec2489a4cf7478dfeb1bceae1d4661fe42d887ec5e01e5e3f0e12d2fd"
+    },
+    {
+      "url": "https://bjcrum.com/fonts/yDtI2UI8XcEg1W2je9XPN3Noo.woff2",
+      "file": "public/fonts/yDtI2UI8XcEg1W2je9XPN3Noo.woff2",
+      "bytes": 28088,
+      "contentType": "font/woff2",
+      "sha256": "236c9fe41df720209dd1a1f942b5c95e338831b29df381e8ce9f405b40a9209a"
+    },
+    {
+      "url": "https://bjcrum.com/images/4QJwf0IpAezr82J9AosKZkRuVM_f0b524.png",
+      "file": "public/images/4QJwf0IpAezr82J9AosKZkRuVM_f0b524.png",
+      "bytes": 552285,
+      "contentType": "image/png",
+      "sha256": "64119bc6a1eb2c83f0bb816fe24008887ddf8f024c999272e632a46bb1191666"
+    },
+    {
+      "url": "https://bjcrum.com/images/4QJwf0IpAezr82J9AosKZkRuVM_f8287a.png",
+      "file": "public/images/4QJwf0IpAezr82J9AosKZkRuVM_f8287a.png",
+      "bytes": 113467,
+      "contentType": "image/png",
+      "sha256": "36571f9f9375b5a422ac3e7104e92c034675624c9c340509b019a8c9ecf92c9c"
+    },
+    {
+      "url": "https://bjcrum.com/images/566csQkwAzFmNqUmvFdjzVkalo.jpg",
+      "file": "public/images/566csQkwAzFmNqUmvFdjzVkalo.jpg",
+      "bytes": 2081,
+      "contentType": "image/jpeg",
+      "sha256": "24e2e72e16972b6a85f8dc825569429d8d6573fdc92ef8b9235e4e0115824836"
+    },
+    {
+      "url": "https://bjcrum.com/images/5vXVfiaaTAeEtBIYInZAq2Do7Y_47ae62.png",
+      "file": "public/images/5vXVfiaaTAeEtBIYInZAq2Do7Y_47ae62.png",
+      "bytes": 823578,
+      "contentType": "image/png",
+      "sha256": "62ce0de4c6664dc109606c05c2a6f0d31c08af6f80806da4d5e9d7a4fa83b60b"
+    },
+    {
+      "url": "https://bjcrum.com/images/anJYVlwqcNJZADfT76VLM7ueg_014a4f.png",
+      "file": "public/images/anJYVlwqcNJZADfT76VLM7ueg_014a4f.png",
+      "bytes": 229514,
+      "contentType": "image/png",
+      "sha256": "f05af38aa2c51057df8acd4ee0ab7b55844e89637b142e68ba4f90e54a0fd1ec"
+    },
+    {
+      "url": "https://bjcrum.com/images/eBQU4mGjv64pxjCOyI9D24dweM_37800b.png",
+      "file": "public/images/eBQU4mGjv64pxjCOyI9D24dweM_37800b.png",
+      "bytes": 559969,
+      "contentType": "image/png",
+      "sha256": "c4af384bea7d75e6fb7f1a050631471e0c3fd41668816ef112988d7ff6b17031"
+    },
+    {
+      "url": "https://bjcrum.com/images/eBQU4mGjv64pxjCOyI9D24dweM_c69d0c.png",
+      "file": "public/images/eBQU4mGjv64pxjCOyI9D24dweM_c69d0c.png",
+      "bytes": 151863,
+      "contentType": "image/png",
+      "sha256": "fbced8aaffa3e127f6068aebf8624294d73fc09c45e48de6d0c32cc69cf5f54a"
+    },
+    {
+      "url": "https://bjcrum.com/images/gcJ9o7S1Ow5wHWpbicvvnZxN6W8_37800b.png",
+      "file": "public/images/gcJ9o7S1Ow5wHWpbicvvnZxN6W8_37800b.png",
+      "bytes": 129543,
+      "contentType": "image/png",
+      "sha256": "0924988e6a4810e8fc89d50e454507ccc9361a8e4b09ff2a577ae9d87fd5c879"
+    },
+    {
+      "url": "https://bjcrum.com/images/mMaeJzBlRJjcDRfMTJHk0UBDiFU_4ef29c.png",
+      "file": "public/images/mMaeJzBlRJjcDRfMTJHk0UBDiFU_4ef29c.png",
+      "bytes": 1379456,
+      "contentType": "image/png",
+      "sha256": "03297b5c06e255efa6a3f6df966e3b1c53d5790cb8f361a6612f6b4085c69ce5"
+    },
+    {
+      "url": "https://bjcrum.com/images/oASzTBkQnEYoP1EbjaCgUQnH0Vw_c4dc88.png",
+      "file": "public/images/oASzTBkQnEYoP1EbjaCgUQnH0Vw_c4dc88.png",
+      "bytes": 294647,
+      "contentType": "image/png",
+      "sha256": "f69d477571245ee7240404504b006df9eaf534dbeece2645e97999f7bebd9482"
+    },
+    {
+      "url": "https://bjcrum.com/images/robot-head.glb",
+      "file": "public/images/robot-head.glb",
+      "bytes": 18575184,
+      "contentType": "model/gltf-binary",
+      "sha256": "281d99ace2fdca48bc9a148bfec2f89fd99cbf7ed9ec375a28fa1ef08d667b7a"
+    },
+    {
+      "url": "https://bjcrum.com/images/rULrgRqgbN6lLoU3sOyv8QfCRQk_37800b.png",
+      "file": "public/images/rULrgRqgbN6lLoU3sOyv8QfCRQk_37800b.png",
+      "bytes": 115560,
+      "contentType": "image/png",
+      "sha256": "2a00234264a5c2dd9269e2a1955a1d75abde0446c0b1c55f9008f3ab7732a846"
+    },
+    {
+      "url": "https://bjcrum.com/images/sKE7LTTp2EHq2Y2aLvO0GMlZY0_37800b.png",
+      "file": "public/images/sKE7LTTp2EHq2Y2aLvO0GMlZY0_37800b.png",
+      "bytes": 361706,
+      "contentType": "image/png",
+      "sha256": "5022bee26a016cfa1b378e52e244617d296d2cc4ac7c3c8a5f0209386de29e00"
+    },
+    {
+      "url": "https://bjcrum.com/images/uA4X1BQ3H7HzVkkqFBRqpmNu2E_37800b.png",
+      "file": "public/images/uA4X1BQ3H7HzVkkqFBRqpmNu2E_37800b.png",
+      "bytes": 26687,
+      "contentType": "image/png",
+      "sha256": "ffe90fd8a07964db724fda0c37ab1aa48e9d39e92ae6356233f5aaa3c755ab85"
+    },
+    {
+      "url": "https://bjcrum.com/images/wqHWpq5sFiInSW15KWBcQjF9C08_014a4f.png",
+      "file": "public/images/wqHWpq5sFiInSW15KWBcQjF9C08_014a4f.png",
+      "bytes": 89370,
+      "contentType": "image/png",
+      "sha256": "1d77f821dc7c3072b955d9d4a2283fb150107df483c62f78d0b0b33e9797b76e"
+    },
+    {
+      "url": "https://bjcrum.com/images/zHEPED1Ple5F5h6FhbH1po6MWzQ_37800b.png",
+      "file": "public/images/zHEPED1Ple5F5h6FhbH1po6MWzQ_37800b.png",
+      "bytes": 64933,
+      "contentType": "image/png",
+      "sha256": "23eb3ca3a14a996e492d05940a0adada3a3bde6904bd34e96ac2bc5e99e89b15"
+    },
+    {
+      "url": "https://bjcrum.com/",
+      "file": "public/index.html",
+      "bytes": 110895,
+      "contentType": "text/html; charset=utf-8",
+      "sha256": "7c27eefb40ab821f836261606becaf45f66419035ad310a94892bb783193edc8"
+    },
+    {
+      "url": "https://bjcrum.com/js/chrome.js",
+      "file": "public/js/chrome.js",
+      "bytes": 1987,
+      "contentType": "application/javascript; charset=utf-8",
+      "sha256": "2ed6f3e9def7030fc1db710f92dba8c321c242e9929e55bf1f5fbf10185be4e3"
+    },
+    {
+      "url": "https://bjcrum.com/js/GLTFLoader.js",
+      "file": "public/js/GLTFLoader.js",
+      "bytes": 96550,
+      "contentType": "application/javascript; charset=utf-8",
+      "sha256": "5c15967ba830918a9caea6338712c994c354bccd4edc4569bde411c3ec06a3e6"
+    },
+    {
+      "url": "https://bjcrum.com/js/motion.js",
+      "file": "public/js/motion.js",
+      "bytes": 11091,
+      "contentType": "application/javascript; charset=utf-8",
+      "sha256": "9c26362af1ddabc16f30900b2c21df1ea6958232d5b55b79a56f83c84fbc003c"
+    },
+    {
+      "url": "https://bjcrum.com/js/pricing.js",
+      "file": "public/js/pricing.js",
+      "bytes": 3908,
+      "contentType": "application/javascript; charset=utf-8",
+      "sha256": "dda1db5ab84fddb2fecee07c980255d662bfeba72b25f8510d39461694f0294f"
+    },
+    {
+      "url": "https://bjcrum.com/js/product-tour.js",
+      "file": "public/js/product-tour.js",
+      "bytes": 3992,
+      "contentType": "application/javascript; charset=utf-8",
+      "sha256": "d418ba068778da7f1377e568391d66a3441ba9c40f5eb5c3afae152001dc7411"
+    },
+    {
+      "url": "https://bjcrum.com/js/robot.js",
+      "file": "public/js/robot.js",
+      "bytes": 4230,
+      "contentType": "application/javascript; charset=utf-8",
+      "sha256": "94ffd0984c57790d25d49384c80e0c93921c0dfb191d741008851f4da725afd6"
+    },
+    {
+      "url": "https://bjcrum.com/js/site-config.js",
+      "file": "public/js/site-config.js",
+      "bytes": 1754,
+      "contentType": "application/javascript; charset=utf-8",
+      "sha256": "896e1f7a8f0cde76df18251b18da50f6df1bb25df90ce467400efa50ac6a4791"
+    },
+    {
+      "url": "https://bjcrum.com/js/site.js",
+      "file": "public/js/site.js",
+      "bytes": 3151,
+      "contentType": "application/javascript; charset=utf-8",
+      "sha256": "553571f94d36aa498b67f0fbe9a6b15fb9a33b0e0171deec0eca0223ffce2232"
+    },
+    {
+      "url": "https://bjcrum.com/js/theme.js",
+      "file": "public/js/theme.js",
+      "bytes": 412,
+      "contentType": "application/javascript; charset=utf-8",
+      "sha256": "d2ff43791865feef34cc082e173b1b876ac2a8d6b3148285f2dc0d8c26e381c4"
+    },
+    {
+      "url": "https://bjcrum.com/js/three.min.js",
+      "file": "public/js/three.min.js",
+      "bytes": 603445,
+      "contentType": "application/javascript; charset=utf-8",
+      "sha256": "9274bbcec8d96168626c732b5d31c775aa8cfb7eaa0599bec0c175908a2c1ce2"
+    },
+    {
+      "url": "https://bjcrum.com/legal/acceptable-use",
+      "file": "public/legal/acceptable-use/index.html",
+      "bytes": 17150,
+      "contentType": "text/html; charset=utf-8",
+      "sha256": "3a4371da86fdb8a95e10ac48550984391e7ede26bf351a728bba6893e01e3d45"
+    },
+    {
+      "url": "https://bjcrum.com/legal/cookies",
+      "file": "public/legal/cookies/index.html",
+      "bytes": 13170,
+      "contentType": "text/html; charset=utf-8",
+      "sha256": "a5e9763a3561beedb8ee046ad08eb397f84d95bb508db01a6a36a527740c418a"
+    },
+    {
+      "url": "https://bjcrum.com/legal",
+      "file": "public/legal/index.html",
+      "bytes": 7386,
+      "contentType": "text/html; charset=utf-8",
+      "sha256": "d613e22f6b5eaeb19afc453b9f4d51d811d3dd71d6b05251310ccba3005ce6a8"
+    },
+    {
+      "url": "https://bjcrum.com/legal/privacy",
+      "file": "public/legal/privacy/index.html",
+      "bytes": 23102,
+      "contentType": "text/html; charset=utf-8",
+      "sha256": "381efb9f8993cc1acca4a4999bd1768e2b0a4098741945cd5b607af77f640177"
+    },
+    {
+      "url": "https://bjcrum.com/legal/refund",
+      "file": "public/legal/refund/index.html",
+      "bytes": 14120,
+      "contentType": "text/html; charset=utf-8",
+      "sha256": "a0137c83a508204cac340f070e11e68545bb5bd90e9ce3d2695ff5ffca188c95"
+    },
+    {
+      "url": "https://bjcrum.com/legal/terms",
+      "file": "public/legal/terms/index.html",
+      "bytes": 27259,
+      "contentType": "text/html; charset=utf-8",
+      "sha256": "1f8354b06a0c8bc13f3dcd6bef51e5c9d319919d05dd34fdcdf406e6748cf112"
+    },
+    {
+      "url": "https://bjcrum.com/tailwind.css",
+      "file": "public/tailwind.css",
+      "bytes": 34068,
+      "contentType": "text/css; charset=utf-8",
+      "sha256": "49a1d38d30e348699bccac88fed67bf172cb0f78f7eb5305db63beaab3e95651"
+    }
+  ],
+  "routes": {
+    "/": "index.html",
+    "/legal": "legal/index.html",
+    "/legal/privacy": "legal/privacy/index.html",
+    "/legal/terms": "legal/terms/index.html",
+    "/legal/acceptable-use": "legal/acceptable-use/index.html",
+    "/legal/cookies": "legal/cookies/index.html",
+    "/legal/refund": "legal/refund/index.html"
+  },
+  "externalReferences": [
+    "https://app.bjcrum.com/",
+    "https://app.bjcrum.com/auth",
+    "https://app.bjcrum.com/docs",
+    "https://app.bjcrum.com/templates",
+    "https://app.bjcrum.com/templates/estateflow",
+    "https://app.bjcrum.com/templates/offset",
+    "https://app.bjcrum.com/templates/saasforge",
+    "https://stripe.com/privacy"
+  ],
+  "failures": []
+}
