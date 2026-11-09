@@ -15,9 +15,10 @@
 .tpl-type { flex:none; padding:3px 10px; border-radius:999px; border:1px solid var(--border-medium); background:var(--bg-card); font:500 12px/1.5 Inter,sans-serif; color:var(--text-secondary); }
 .tpl-cta { display:flex; justify-content:center; margin-top:48px; }
 @media (max-width:1099px) { .tpl-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media (max-width:599px) { .tpl-grid { grid-template-columns:1fr; gap:28px; } }
 @media (max-width:809px) {
   .tpl-heading { flex-direction:column; align-items:flex-start; gap:12px; }
-  .tpl-grid { grid-template-columns:1fr; gap:28px; }
+  .tpl-grid { gap:28px 18px; }
 }
 @media (prefers-reduced-motion:reduce) { .tpl-media img { transition:none; } }
 /* "Free" badges share the secondary buttons' gradient border (tokens from brand.css). */

@@ -113,12 +113,14 @@ html.light .product-tour .tour-grain { background:url("data:image/svg+xml,%3Csvg
 html.light .product-tour .tour-stage.is-shown .tour-grain { opacity:.4; }
 @media (prefers-reduced-motion:reduce) { .product-tour .tour-grain { transition:none; } }
 
-/* Scroll-driven 3D tilt (js/product-tour.js sets --tilt from 0 to 1), matched to the reference
-   Framer site: rotateX 27deg, scale .89, translateY 27px at the start; centred origin; no fade. */
-.product-tour .tour-stage.has-tilt { --tilt:1; --tilt-deg:27deg; will-change:transform;
-  transform:translateY(calc((1 - var(--tilt)) * 27px)) scale(calc(.89 + var(--tilt) * .11)) rotateX(calc((1 - var(--tilt)) * var(--tilt-deg))); }
+/* Scroll-driven 3D tilt (js/product-tour.js sets --tilt from 0 to 1 on the stage), matched to the
+   reference Framer site: rotateX 27deg, scale .89, translateY 27px at the start; no fade.
+   The stage container stays still; only the screen card inside it tilts. */
+.product-tour .tour-stage.has-tilt { --tilt:1; --tilt-deg:27deg; }
+.product-tour .tour-stage.has-tilt .tour-frame { will-change:transform; transform-origin:50% 100%;
+  transform:perspective(1400px) translateY(calc((1 - var(--tilt)) * 27px)) scale(calc(.89 + var(--tilt) * .11)) rotateX(calc((1 - var(--tilt)) * var(--tilt-deg))); }
 @media (max-width:700px) { .product-tour .tour-stage.has-tilt { --tilt-deg:14deg; } }
-@media (prefers-reduced-motion:reduce) { .product-tour .tour-stage.has-tilt { transform:none; } }
+@media (prefers-reduced-motion:reduce) { .product-tour .tour-stage.has-tilt .tour-frame { transform:none; } }
 
 /* Secondary buttons: no shadow in any state. */
 html body .site-button.secondary,html body .site-button.secondary:hover,html body .site-button.secondary:active,

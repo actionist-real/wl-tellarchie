@@ -64,7 +64,8 @@ html.light .why-section .why-desktop,html.light .why-section .why-phone { box-sh
   .why-section .why-context-chip { padding: 8px; gap: 5px; font-size: 10px; }
   .why-section .why-context-inputs { padding-inline: 3%; gap: 5px; }
   .why-section .why-project-node { left: 2%; width: 88px; }
-  .why-section .why-export-targets { right: 0; }
+  .why-section .why-export-map { max-width: 340px; }
+  .why-section .why-export-targets { right: 3%; }
   .why-section .why-export-target { min-width: 110px; padding: 12px 10px; font-size: 11px; }
 }
 @media(max-width:640px) {
