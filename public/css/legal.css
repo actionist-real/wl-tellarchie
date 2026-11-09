@@ -5,8 +5,8 @@
 .legal-page-heading::before { content: ''; position: absolute; z-index: -1; pointer-events: none; top: -160px; left: -120px; width: min(740px, 90vw); height: 560px; background: radial-gradient(ellipse, color-mix(in srgb,var(--palette-emphasis) 7.451%,transparent), transparent 68%); }
 .legal-back { display: inline-flex; gap: 8px; text-decoration: none; color: var(--text-secondary); font-size: 13px; margin-bottom: 48px; }
 .legal-back:hover { color: var(--text-primary); }
-.legal-eyebrow { color: var(--brand-logo-light); font-size: 11px; letter-spacing: .14em; font-weight: 600; margin: 0 0 20px; }
-.legal-page-heading h1 { font-family: 'Bricolage Grotesque', Inter, sans-serif; font-size: clamp(42px, 4.5vw, 64px); line-height: 1.07; letter-spacing: -.035em; font-weight: 600; margin: 0 0 24px; max-width: 880px; text-wrap: balance; }
+.legal-eyebrow { color: var(--brand-logo-light); font-size: 11px; letter-spacing: .14em; font-weight: 600; text-transform: uppercase; margin: 0 0 20px; }
+.legal-page-heading h1 { font-family: 'Bricolage Grotesque', Inter, sans-serif; font-size: clamp(42px, 4.5vw, 64px); line-height: 1.07; letter-spacing: -.035em; font-weight: 700; margin: 0 0 24px; max-width: 880px; text-wrap: balance; }
 .legal-hub .legal-page-heading h1 { font-size: clamp(48px, 5.3vw, 76px); }
 .legal-page-heading h1 span { color: var(--text-secondary); font-weight: 400; }
 .legal-description { margin: 0 0 20px; color: var(--text-secondary); font-size: 17px; line-height: 1.65; max-width: 620px; }

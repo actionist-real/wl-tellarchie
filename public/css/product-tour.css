@@ -1,59 +1,92 @@
-/* Connected product tabs above a shared animated image stage. */
+/* Product tour: one large media stage, with timed chapter tabs underneath. */
 .tour-section { padding-top:80px; padding-bottom:110px; }
 .tour-section .section-heading { margin:0 auto 44px; }
-.tour-section .section-heading h2 { font-size:clamp(36px,4.5vw,60px); line-height:1.06; font-weight:500; }
-.tour-section .section-heading p { max-width:550px; }
-.product-tour { position:relative; isolation:isolate; overflow:hidden; border:1px solid var(--border-medium); border-radius:8px; background:var(--bg-sidebar); }
-.tour-tabs { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); margin:0; border-bottom:1px solid var(--border-medium); }
-.tour-tab { position:relative; display:flex; align-items:center; min-width:0; min-height:72px; padding:20px 18px; border-right:1px solid var(--border-subtle); color:var(--text-secondary); background:var(--bg-sidebar); text-decoration:none; font:500 13px/1.4 Inter,sans-serif; transition:background .2s,color .2s; }
-.tour-tab:last-child { border-right:0; }
-.tour-tab::before { content:''; position:absolute; top:0; left:0; right:0; height:3px; background:transparent; }
-.tour-tab:hover { color:var(--text-primary); background:var(--bg-card); }
-.tour-tab[aria-selected=true] { color:var(--text-primary); background:var(--bg-surface); }
-.tour-tab[aria-selected=true]::before { background:var(--palette-emphasis); }
-.tour-tab:focus-visible { outline-offset:-5px; }
-.tour-stage { position:relative; isolation:isolate; padding:40px 56px; }
-.tour-backdrop { position:absolute; inset:0; z-index:-1; overflow:hidden; pointer-events:none; background:radial-gradient(ellipse at 15% 20%,#ffab79,transparent 55%),radial-gradient(ellipse at 85% 85%,#f28b42,transparent 60%),#f5d2ad; }
-.tour-backdrop iframe { display:block; width:100%; height:100%; border:0; opacity:0; pointer-events:none; transition:opacity .3s; }
-.tour-backdrop.is-loaded iframe { opacity:1; }
-.tour-grain { position:absolute; inset:0; opacity:.05; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); pointer-events:none; }
+.tour-section .section-heading h2 { font-size:clamp(30px,3.4vw,44px); line-height:1.08; font-weight:500; }
+.tour-section .section-heading p { max-width:520px; font-size:14px; line-height:1.65; }
+
+.product-tour {
+  --tour-accent: var(--palette-emphasis);
+  --tour-deep: color-mix(in srgb, var(--palette-support) 34%, var(--bg-sidebar));
+  position:relative;
+}
+
+/* Stage */
+.tour-stage {
+  position:relative; isolation:isolate; overflow:hidden;
+  padding:clamp(28px,6vw,80px) clamp(16px,7vw,128px) 0;
+  border:1px solid var(--border-medium); border-radius:24px;
+  background:linear-gradient(180deg, var(--bg-sidebar) 0%, var(--bg-sidebar) 35%, var(--tour-deep) 100%);
+}
+.tour-backdrop { position:absolute; inset:0; z-index:-1; pointer-events:none; }
+.tour-stars {
+  position:absolute; inset:0; opacity:.55;
+  background-image:
+    radial-gradient(circle at 20% 30%, color-mix(in srgb, var(--palette-ink) 70%, transparent) 0 1px, transparent 1.6px),
+    radial-gradient(circle at 70% 60%, color-mix(in srgb, var(--text-primary) 45%, transparent) 0 1px, transparent 1.6px),
+    radial-gradient(circle at 40% 80%, color-mix(in srgb, var(--palette-ink) 40%, transparent) 0 .8px, transparent 1.3px);
+  background-size:190px 170px, 260px 230px, 120px 140px;
+  -webkit-mask-image:linear-gradient(180deg, transparent 0%, #000 45%);
+          mask-image:linear-gradient(180deg, transparent 0%, #000 45%);
+}
+.tour-glow {
+  position:absolute; left:50%; bottom:-30%; width:120%; height:80%; translate:-50% 0;
+  background:radial-gradient(ellipse at center, color-mix(in srgb, var(--tour-accent) 26%, transparent), transparent 65%);
+}
+
+/* Panels share one grid cell so the stage never jumps in height. */
 .tour-panels { display:grid; gap:32px; }
 [data-tour-ready] .tour-panels { gap:0; }
 [data-tour-ready] .tour-panel { grid-area:1/1; }
 .tour-panel { min-width:0; }
 .tour-panel[inert] { pointer-events:none; }
-.tour-figure { margin:0; }
-.tour-frame { overflow:hidden; position:relative; border:1px solid #ffffff24; border-radius:6px; background:#111312; box-shadow:0 20px 45px #00000030; }
-.tour-frame-bar { min-height:36px; padding:0 12px; display:flex; align-items:center; justify-content:space-between; gap:8px; background:#141715; border-bottom:1px solid #ffffff14; }
-.tour-browser-dots { display:flex; gap:5px; }
-.tour-browser-dots i { width:6px; height:6px; border-radius:50%; background:#ffffff30; }
-.tour-fullscreen { display:inline-flex; align-items:center; gap:6px; min-height:36px; padding:5px 7px; border-radius:4px; color:#d4ddd5; text-decoration:none; font-size:10px; transition:background .2s,color .2s; }
-.tour-fullscreen:hover { background:#ffffff0d; color:#fff; }
-.tour-screen { display:flex; align-items:center; justify-content:center; position:relative; background:#111312; }
-.tour-image-wrap { position:relative; width:100%; aspect-ratio:var(--image-ratio); }
-.tour-screenshot { display:block; width:100%; height:auto; }
-.tour-cta { text-align:center; margin-top:44px; }
-.tour-cta p { margin:12px 0 0; color:var(--text-muted); font-size:12px; }
-@media (max-width:1000px) { .tour-tab { padding:18px 12px; font-size:12px; } .tour-stage { padding:32px; } }
-@media (max-width:700px) {
- .tour-section { padding-top:64px; padding-bottom:80px; }
- .tour-section .section-heading { margin-bottom:30px; }
- .tour-section .section-heading p { font-size:14px; }
- .tour-tabs { display:flex; overflow-x:auto; scrollbar-width:thin; }
- .tour-tab { flex:0 0 180px; min-height:64px; padding:16px; }
- .tour-stage { padding:16px; }
- .tour-fullscreen span { display:none; }
- .tour-cta { margin-top:32px; }
+
+.tour-frame {
+  position:relative; overflow:hidden;
+  padding:clamp(4px,.6vw,8px) clamp(4px,.6vw,8px) 0;
+  border:1px solid color-mix(in srgb, var(--tour-accent) 40%, transparent); border-bottom:0;
+  border-radius:18px 18px 0 0;
+  background:color-mix(in srgb, var(--bg-surface) 70%, transparent);
+  box-shadow:0 0 0 6px color-mix(in srgb, var(--tour-accent) 6%, transparent),
+             0 -10px 60px color-mix(in srgb, var(--tour-accent) 14%, transparent);
 }
-@media (prefers-reduced-motion:reduce) { .tour-tab,.tour-fullscreen,.tour-backdrop iframe { transition:none; } }
-/* The active label's top edge is a timed loader, fading from left to right. */
-.tour-tab[aria-selected=true]::before { background:linear-gradient(90deg,color-mix(in srgb,var(--palette-emphasis) 15%,transparent),var(--palette-emphasis)); transform:scaleX(var(--tour-progress,0)); transform-origin:left; }
-.tour-playback { position:absolute; right:12px; bottom:9px; border:0; border-radius:4px; padding:4px 7px; background:#10161299; color:#fff; font:500 10px/1.4 Inter,sans-serif; }
-@media (max-width:700px) { .tour-playback { position:relative; display:block; margin:10px 0 -6px auto; right:auto; bottom:auto; } }
-@media (prefers-reduced-motion:reduce) { .tour-playback { display:none; } .tour-tab[aria-selected=true]::before { transform:none; } }
+.tour-media {
+  display:block; width:100%; height:auto; aspect-ratio:3164/2132; object-fit:cover; object-position:top center;
+  border:1px solid var(--border-subtle); border-bottom:0; border-radius:12px 12px 0 0; background:var(--bg-canvas);
+}
+video.tour-media { object-fit:contain; }
 
-.tour-video { display:block; width:100%; height:auto; object-fit:contain; background:#111312; }
-.tour-video:fullscreen { width:100%; height:100%; object-fit:contain; }
+/* Chapter tabs */
+.tour-tabs { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:clamp(20px,2.4vw,36px); margin-top:clamp(32px,4vw,56px); }
+.tour-tab { display:flex; flex-direction:column; gap:14px; min-width:0; color:var(--text-muted); text-decoration:none; outline-offset:6px; border-radius:4px; }
+.tour-progress { position:relative; display:block; height:4px; margin-bottom:12px; overflow:hidden; border-radius:999px; background:var(--border-subtle); }
+.tour-progress span {
+  position:absolute; inset:0; border-radius:inherit;
+  background:linear-gradient(90deg, var(--palette-support), var(--tour-accent));
+  transform:scaleX(var(--tour-progress,0)); transform-origin:left;
+}
+.tour-tab-title { font:500 clamp(17px,1.4vw,21px)/1.25 Inter,sans-serif; color:var(--text-muted); letter-spacing:-.01em; transition:color .3s; }
+.tour-tab-text { font:400 15px/1.55 Inter,sans-serif; color:var(--text-muted); opacity:.65; transition:color .3s,opacity .3s; }
+.tour-tab:hover .tour-tab-title { color:var(--text-secondary); }
+.tour-tab:hover .tour-tab-text { opacity:.85; }
+.tour-tab[aria-selected=true] .tour-tab-title { color:var(--text-primary); }
+.tour-tab[aria-selected=true] .tour-tab-text { color:var(--text-secondary); opacity:1; }
 
-/* Hide the slideshow button at every breakpoint without changing playback. */
-[data-product-tour] .tour-playback { display: none; }
+@media (max-width:1100px) {
+  .tour-tabs { grid-template-columns:repeat(3,minmax(0,1fr)); row-gap:36px; }
+}
+@media (max-width:700px) {
+  .tour-section { padding-top:64px; padding-bottom:80px; }
+  .tour-section .section-heading { margin-bottom:30px; }
+  .tour-section .section-heading p { font-size:13px; }
+  .tour-stage { border-radius:16px; }
+  .tour-frame { border-radius:12px 12px 0 0; box-shadow:none; }
+  .tour-media { border-radius:8px 8px 0 0; }
+  .tour-tabs { display:flex; gap:20px; overflow-x:auto; scroll-snap-type:x mandatory; scrollbar-width:none; padding-bottom:4px; }
+  .tour-tabs::-webkit-scrollbar { display:none; }
+  .tour-tab { flex:0 0 78%; scroll-snap-align:start; }
+  .tour-tab-text { font-size:14px; }
+}
+@media (prefers-reduced-motion:reduce) {
+  .tour-tab-title,.tour-tab-text { transition:none; }
+  .tour-tab[aria-selected=true] .tour-progress span { transform:none; }
+}

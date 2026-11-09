@@ -1,0 +1,24 @@
+/* Templates section: cards modelled on marketplace template cards, in Tell Archi's styles. */
+.templates-section { padding-top:72px; }
+.tpl-heading { display:flex; justify-content:space-between; align-items:end; gap:32px; text-align:left; }
+.tpl-heading p { max-width:380px; margin:0; }
+.tpl-grid { list-style:none; margin:0; padding:0; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:36px 24px; }
+.tpl-link { display:block; text-decoration:none; color:inherit; border-radius:14px; outline-offset:4px; }
+.tpl-media { display:block; overflow:hidden; aspect-ratio:4/3; border-radius:14px; border:1px solid var(--border-medium); background:var(--bg-card); }
+.tpl-media img { display:block; width:100%; height:100%; object-fit:cover; object-position:top center; transition:transform .5s cubic-bezier(.2,.7,.2,1); }
+.tpl-link:hover .tpl-media img,.tpl-link:focus-visible .tpl-media img { transform:scale(1.03); }
+.tpl-link:hover .tpl-media,.tpl-link:focus-visible .tpl-media { border-color:var(--border-strong); }
+.tpl-meta { display:flex; justify-content:space-between; align-items:flex-start; gap:16px; padding:14px 2px 0; }
+.tpl-text { display:flex; flex-direction:column; gap:3px; min-width:0; }
+.tpl-name { font:600 15px/1.3 Inter,sans-serif; color:var(--text-primary); }
+.tpl-cat { font:400 13px/1.45 Inter,sans-serif; color:var(--text-muted); }
+.tpl-type { flex:none; padding:3px 10px; border-radius:999px; border:1px solid var(--border-medium); background:var(--bg-card); font:500 12px/1.5 Inter,sans-serif; color:var(--text-secondary); }
+.tpl-cta { display:flex; justify-content:center; margin-top:48px; }
+@media (max-width:1099px) { .tpl-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media (max-width:809px) {
+  .tpl-heading { flex-direction:column; align-items:flex-start; gap:12px; }
+  .tpl-grid { grid-template-columns:1fr; gap:28px; }
+}
+@media (prefers-reduced-motion:reduce) { .tpl-media img { transition:none; } }
+/* "Free" badges share the secondary buttons' gradient border (tokens from brand.css). */
+.tpl-type { border:1px solid transparent; background:linear-gradient(var(--bg-card),var(--bg-card)) padding-box,linear-gradient(180deg,var(--border-sheen-start),var(--border-sheen-end)) border-box; }

@@ -2,7 +2,7 @@ const root = document.documentElement;
 const themeButton = document.querySelector('.theme-toggle');
 function labelTheme() {
   const light = root.classList.contains('light');
-  document.querySelector('meta[name="theme-color"]')?.setAttribute('content', light ? '#fbf9f3' : '#1B211D');
+  document.querySelector('meta[name="theme-color"]')?.setAttribute('content', light ? '#f6fafb' : '#121212');
   themeButton.setAttribute('aria-label', `Switch to ${light ? 'dark' : 'light'} theme`);
   themeButton.setAttribute('aria-pressed', String(light));
 }
@@ -12,7 +12,7 @@ themeButton.addEventListener('click', () => {
   root.classList.toggle('dark', theme === 'dark');
   root.classList.toggle('light', theme === 'light');
   root.setAttribute('toggle-theme', theme);
-  try { localStorage.setItem('superintelligencecoder-theme', theme); } catch {}
+  try { localStorage.setItem('tellarchi-theme', theme); } catch {}
   labelTheme();
 });
 

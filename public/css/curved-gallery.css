@@ -1,0 +1,14 @@
+/* Curved image row (js/curved-gallery.js). */
+#made .curved-gallery { position:relative; overflow:hidden; height:clamp(340px,42vw,620px); margin-top:12px; }
+#made .curved-gallery-strip { background:var(--bg-card); }
+#made .curved-gallery-strip.is-first { border-radius:12px 0 0 12px; }
+#made .curved-gallery-strip.is-last { border-radius:0 12px 12px 0; }
+/* Without JS: a plain row that scrolls sideways. */
+#made .curved-gallery-fallback { display:flex; gap:16px; height:100%; align-items:center; padding:0 24px; overflow-x:auto; scrollbar-width:none; }
+#made .curved-gallery-fallback img { flex:0 0 auto; height:62%; width:auto; aspect-ratio:16/10; object-fit:cover; border-radius:12px; }
+#made .curved-gallery.is-curved .curved-gallery-fallback { display:none; }
+@media (max-width:809px) { #made .curved-gallery { height:clamp(260px,70vw,420px); } }
+/* Edge fades: solid overlays in the page colour, drawn above the 3D band by every renderer. */
+#made .curved-gallery-fade { position:absolute; top:-2px; bottom:-2px; z-index:2; pointer-events:none; }
+#made .curved-gallery-fade.left { left:-1px; background:linear-gradient(90deg,var(--bg-surface) 8%,transparent); }
+#made .curved-gallery-fade.right { right:-1px; background:linear-gradient(270deg,var(--bg-surface) 8%,transparent); }

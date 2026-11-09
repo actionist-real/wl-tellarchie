@@ -1,3 +1,4 @@
+import './hero-shader.js';
 import { promptUrl } from './site-config.js';
 import { initPricing } from './pricing.js';
 import './motion.js';
@@ -34,6 +35,8 @@ document.addEventListener('keydown', (event) => {
 });
 
 import './product-tour.js';
+import './workspace.js';
+import './lifecycle.js';
 
 const dialog = document.querySelector('.image-dialog');
 let previewTrigger;
@@ -52,31 +55,9 @@ dialog.querySelector('.dialog-close').addEventListener('click', () => dialog.clo
 dialog.addEventListener('click', (event) => { if (event.target === dialog) dialog.close(); });
 dialog.addEventListener('close', () => previewTrigger?.focus());
 
-// Only download the 3D enhancement when the diagram is near the viewport.
-// The exported illustration remains visible if WebGL, the network, or motion is unavailable.
-const diagram = document.querySelector('#diagram-section');
-const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
-function loadScript(src) {
-  return new Promise((resolve, reject) => {
-    const script = document.createElement('script');
-    script.src = src; script.onload = resolve; script.onerror = reject;
-    document.head.append(script);
-  });
-}
-if (!reducedMotion.matches && 'IntersectionObserver' in window) {
-  const observer = new IntersectionObserver(async (entries) => {
-    if (!entries.some((entry) => entry.isIntersecting)) return;
-    observer.disconnect();
-    if (reducedMotion.matches) return;
-    try {
-      await loadScript('/js/three.min.js');
-      await loadScript('/js/GLTFLoader.js');
-      await loadScript('/js/robot.js');
-    } catch { /* Keep the existing static illustration. */ }
-  }, { rootMargin: '200px' });
-  observer.observe(diagram);
-}
+// Diagram mascot: a light 2.5D float and tilt on the static illustration.
+import './archi-mascot.js';
 
-import './made-gallery.js';
+import './curved-gallery.js';
 
 import './faq.js';

@@ -1,0 +1,92 @@
+/* Pricing: one shell holding a raised featured plan, a recessed base plan and a strip of credit facts. */
+#pricing { height:auto !important; padding:clamp(64px,7vw,96px) var(--page-gutter,24px) !important; }
+.pricing-wrapper { width:100%; max-width:1160px; margin:auto; --price-line:color-mix(in srgb,var(--text-primary) 8%,transparent); --price-line-strong:color-mix(in srgb,var(--text-primary) 13%,transparent); }
+
+.section-intro { max-width:640px; margin:0 auto clamp(32px,4vw,48px); text-align:center; }
+.pricing-eyebrow { display:inline-block; margin-bottom:16px; padding:5px 12px; border:0; border-radius:999px; background:var(--bg-card); color:var(--text-secondary); font:500 12px/1.4 Inter,sans-serif; letter-spacing:.02em; }
+.section-intro h2 { font:500 clamp(32px,4vw,48px)/1.1 'Bricolage Grotesque',sans-serif; letter-spacing:-.03em; color:var(--text-primary); }
+.section-intro p { margin-top:14px; color:var(--text-secondary); font-size:16px; line-height:1.6; }
+
+.pricing-shell {
+  display:grid; grid-template-columns:minmax(0,1.45fr) minmax(0,1fr); gap:8px;
+  padding:8px; border:1px solid var(--price-line); border-radius:20px;
+  background:var(--bg-sidebar);
+}
+
+/* Shared plan layout */
+.price-plan { position:relative; display:flex; flex-direction:column; min-width:0; padding:clamp(24px,3vw,36px); border-radius:11px; }
+.price-head { display:flex; flex-wrap:wrap; align-items:center; gap:10px 12px; }
+.price-head h3 { font:600 20px/1.2 'Bricolage Grotesque',Inter,sans-serif; letter-spacing:-.01em; color:var(--text-primary); }
+.price-promo { padding:4px 10px; border-radius:999px; font:500 12px/1.4 Inter,sans-serif; color:var(--brand-logo-light); background:color-mix(in srgb,var(--palette-emphasis) 12%,transparent); border:0; }
+.price-amount { display:flex; align-items:baseline; margin-top:18px; color:var(--text-primary); }
+.price-currency { align-self:flex-start; margin:6px 2px 0 0; font:500 24px/1 'Bricolage Grotesque',sans-serif; color:var(--text-secondary); }
+.price-value { font:600 clamp(48px,5vw,60px)/1 'Bricolage Grotesque',sans-serif; letter-spacing:-.045em; }
+.price-cadence { margin-left:10px; font-size:15px; color:var(--text-muted); }
+.price-meta { display:flex; align-items:flex-start; gap:8px; margin-top:14px; font-size:14px; line-height:1.5; color:var(--text-secondary); }
+.price-meta .site-icon { margin-top:3px; color:var(--brand-logo-light); }
+.price-meta strong { color:var(--text-primary); font-weight:600; }
+
+html body #pricing .price-cta { width:100%; margin-top:22px; min-height:48px; padding:12px 20px; font-size:15px !important; line-height:22px !important; font-weight:600; }
+.price-cta .site-icon { transition:transform .2s; }
+.price-cta:hover .site-icon { transform:translateX(3px); }
+.price-billing { margin-top:10px; text-align:center; font-size:12px; color:var(--text-muted); }
+
+.price-list-label { margin:22px 0 14px; padding-top:20px; border-top:1px solid var(--price-line); font-size:13px; font-weight:600; color:var(--text-primary); }
+.price-list { display:grid; gap:10px; margin:0; padding:0; list-style:none; }
+.price-list li { display:flex; gap:10px; font-size:14px; line-height:1.5; color:var(--text-secondary); }
+.price-check { flex:none; width:16px; height:16px; margin-top:2px; color:var(--text-primary); }
+.price-note { display:flex; gap:8px; margin-top:auto; padding-top:20px; font-size:13px; line-height:1.5; color:var(--text-muted); }
+.price-note .site-icon { margin-top:2px; }
+
+/* Featured plan: raised card with a cyan gradient edge and a soft corner glow. */
+.price-plan--featured {
+  isolation:isolate; background:var(--bg-card);
+  box-shadow:0 0 0 1px var(--price-line-strong) inset, 0 24px 48px -24px #00000080;
+}
+/* Border beam (same effect as the Why cards' hover, running continuously): a lit arc travels round the edge. */
+@property --price-beam-angle { syntax:'<angle>'; inherits:false; initial-value:0deg; }
+.price-plan--featured::before {
+  content:""; position:absolute; inset:0; z-index:1; border-radius:inherit; padding:1.5px; pointer-events:none;
+  background:conic-gradient(from var(--price-beam-angle),transparent 0deg,var(--palette-support) 47deg,var(--palette-ink) 79deg,transparent 80deg);
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0); -webkit-mask-composite:xor;
+          mask:linear-gradient(#000 0 0) content-box exclude,linear-gradient(#000 0 0);
+  animation:price-beam 5s linear infinite;
+}
+@keyframes price-beam { to { --price-beam-angle:360deg; } }
+.price-plan--featured::after {
+  content:""; position:absolute; inset:0; z-index:-1; border-radius:inherit; pointer-events:none;
+  background:radial-gradient(120% 70% at 100% 0%, color-mix(in srgb,var(--palette-emphasis) 10%,transparent), transparent 60%);
+}
+.price-plan--featured .price-list { grid-template-columns:repeat(2,minmax(0,1fr)); column-gap:24px; }
+
+/* Base plan: recessed, sits on the shell itself. */
+.price-plan--base { background:transparent; }
+.price-plan--base .price-value { color:var(--text-primary); }
+
+/* Credit facts strip across both columns. */
+.price-facts { grid-column:1 / -1; display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:8px; margin:0; padding:0; list-style:none; }
+.price-facts li { display:flex; align-items:center; gap:10px; min-width:0; padding:14px 16px; border-radius:11px; background:color-mix(in srgb,var(--bg-card) 60%,transparent); border:1px solid var(--price-line); font-size:13px; line-height:1.4; color:var(--text-secondary); }
+.price-facts .site-icon { flex:none; width:16px; height:16px; color:var(--brand-logo-light); }
+.price-facts strong { color:var(--text-primary); font-weight:600; }
+
+html.light .price-plan--featured { box-shadow:0 0 0 1px var(--price-line-strong) inset, 0 24px 48px -28px #0e1c2440; }
+html.light .price-facts li { background:#ffffffa6; }
+
+@media (max-width:960px) {
+  .price-facts { grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
+@media (max-width:820px) {
+  .pricing-shell { grid-template-columns:minmax(0,1fr); }
+  .price-plan--base { border:1px solid var(--price-line); }
+}
+@media (max-width:620px) {
+  .price-plan--featured .price-list { grid-template-columns:minmax(0,1fr); }
+  .price-facts li { flex-direction:column; align-items:flex-start; gap:6px; padding:12px 14px; }
+}
+@media (prefers-reduced-motion:reduce) {
+  .price-cta .site-icon { transition:none; }
+  .price-plan--featured::before { animation:none; background:color-mix(in srgb,var(--palette-emphasis) 45%,transparent); }
+}
+
+/* Pause the beam while the section is offscreen (class set by js/motion.js). */
+#pricing.is-offscreen .price-plan--featured::before { animation-play-state:paused; }

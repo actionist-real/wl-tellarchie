@@ -53,7 +53,7 @@ function splitHeading(heading) {
   return [...heading.querySelectorAll('.motion-char')];
 }
 
-function revealHeading(heading, lifecycle = false) {
+function revealHeading(heading, lifecycle = false, offset = 0) {
   if (preference.matches || !heading?.animate) return;
   const characters = splitHeading(heading);
   const mobile = compact.matches;
@@ -66,14 +66,16 @@ function revealHeading(heading, lifecycle = false) {
       { opacity: 0, filter: `blur(${lifecycle ? 8 : 10}px)`, transform: `translateY(${mobile ? 6 : 12}px)` },
       { opacity: 1, filter: 'blur(0)', transform: 'translateY(0)' },
     ],
-    { duration, delay: index * stagger, fill: 'backwards' }));
+    { duration, delay: offset + index * stagger, fill: 'backwards' }));
 }
 
-revealHeading(document.querySelector('.hero-title'));
+// The hero shader's light blooms first; the text follows, as in the reference.
+const heroLead = document.documentElement.classList.contains('hero-shader-on') && !preference.matches ? 350 : 0;
+revealHeading(document.querySelector('.hero-title'), false, heroLead);
 document.querySelectorAll('#hero .hero-description, #hero .framer-vocpb, #hero .prompt-card').forEach((element, index) => {
   animate(element,
     [{ opacity: 0, translate: `0 ${compact.matches ? 12 : 20}px` }, { opacity: 1, translate: '0 0' }],
-    { duration: compact.matches ? 480 : 720, delay: 250 + index * 130, fill: 'backwards' });
+    { duration: compact.matches ? 480 : 720, delay: heroLead + 250 + index * 130, fill: 'backwards' });
 });
 
 // Reveal each card independently; its inner control owns the hover transform.
@@ -102,6 +104,137 @@ if ('IntersectionObserver' in window) {
   observe('#why .section-heading, #made .section-heading, #faq .section-heading, .pricing-wrapper, #final .section-heading', (element) => rise(element));
   observe('.benefit-card', (element, index) => rise(element, compact.matches ? 0 : (index % 2) * 85));
   observe('.showcase-card', (element, index) => rise(element, compact.matches ? 0 : (index % 2) * 100));
+
+  // Reference-style entrance (Code Lab, Kora): content arrives soft and sharpens as it settles.
+  function blurRise(element, delay = 0, blur = 8) {
+    animate(element,
+      [{ opacity: 0, filter: `blur(${blur}px)`, translate: `0 ${compact.matches ? 10 : 16}px` }, { opacity: 1, filter: 'blur(0)', translate: '0 0' }],
+      { duration: compact.matches ? 450 : 700, delay, fill: 'backwards' });
+  }
+  // Media frames come into focus without moving (Morva).
+  function sharpen(element, delay = 0) {
+    animate(element, [{ opacity: 0, filter: 'blur(12px)' }, { opacity: 1, filter: 'blur(0)' }],
+      { duration: compact.matches ? 500 : 900, delay, fill: 'backwards' });
+  }
+  // Followers after a leader; the step shrinks on long lists so they stay brisk.
+  function cascade(parent, selector, start = 0, step = 90) {
+    const items = [...parent.querySelectorAll(selector)];
+    const gap = Math.min(step, 600 / Math.max(1, items.length));
+    items.forEach((item, index) => blurRise(item, start + index * (compact.matches ? gap * .6 : gap)));
+    return start + items.length * gap;
+  }
+
+  // Diagram heading: same character reveal the other section titles use.
+  observe('#diagram-section h2', (element) => revealHeading(element));
+
+  // Workspace: eyebrow, title, intro, then the tab list and the media frame.
+  observe('#workspace .ws-heading', (heading) => {
+    blurRise(heading.querySelector('.eyebrow'));
+    revealHeading(heading.querySelector('h2'), false, 80);
+    blurRise(heading.querySelector('p'), 280);
+  });
+  observe('#workspace .ws-body', (body) => {
+    cascade(body, '.ws-tab', 0, 80);
+    sharpen(body.querySelector('.ws-card'), 120);
+  });
+
+  // Why: each card's illustration settles just after the card itself (its rise is unchanged).
+  observe('#why .why-visual', (visual) => {
+    const card = visual.closest('.benefit-card');
+    const index = [...document.querySelectorAll('#why .benefit-card')].indexOf(card);
+    blurRise(visual, (compact.matches ? 0 : (index % 2) * 85) + 150, 6);
+  });
+  observe('#why .why-cta', (element) => blurRise(element));
+
+  // Templates: heading leads, cards follow in reading order, images sharpen, CTA last.
+  observe('#templates .tpl-heading', (heading) => {
+    blurRise(heading.querySelector('.eyebrow'));
+    revealHeading(heading.querySelector('h2'), false, 80);
+    blurRise(heading.querySelector('p'), 280);
+  });
+  observe('#templates .tpl-grid', (grid) => {
+    const cards = [...grid.querySelectorAll('.tpl-card')];
+    const top = cards[0]?.offsetTop;
+    const columns = Math.max(1, cards.filter((card) => card.offsetTop === top).length);
+    cards.forEach((card, index) => {
+      const delay = compact.matches ? (index % 2) * 70 : (index % columns) * 90 + Math.floor(index / columns) * 120;
+      blurRise(card, delay, 6);
+      sharpen(card.querySelector('.tpl-media'), delay + 60);
+    });
+  });
+  observe('#templates .tpl-cta', (element) => blurRise(element, 120));
+
+  // Pricing: inside the wrapper's existing rise, plans cascade and their lists read in one by one (Whizzy).
+  observe('#pricing .pricing-shell', (shell) => {
+    shell.querySelectorAll('.price-plan').forEach((plan, index) => {
+      const start = 120 + index * 140;
+      blurRise(plan, start, 6);
+      cascade(plan, '.price-list li', start + 320, 60);
+    });
+    cascade(shell, '.price-facts li', 520, 80);
+  });
+
+  // FAQ items follow the heading.
+  observe('#faq .faq-list', (list) => cascade(list, '.faq-item', 100, 70));
+
+  // Final CTA: the room settles into place, then the note.
+  observe('#final .final-surface', (surface) => {
+    const grid = surface.querySelector('.room-perspective-grid');
+    if (grid) {
+      const target = getComputedStyle(grid).opacity;
+      animate(grid, [{ opacity: 0, scale: '1.04' }, { opacity: target, scale: '1' }], { duration: 1400, fill: 'backwards' });
+    }
+    blurRise(surface.querySelector('.final-note'), 600);
+  });
+
+  // Footer columns.
+  observe('.site-footer', (footer) => cascade(footer, '.footer-top > *, .footer-bottom', 0, 90));
+
+  // Continuous decorative loops pause while their section is offscreen.
+  const offscreen = new IntersectionObserver((entries) => {
+    entries.forEach(({ target, isIntersecting }) => target.classList.toggle('is-offscreen', !isIntersecting));
+  }, { rootMargin: '100px 0px' });
+  document.querySelectorAll('#pricing, #why').forEach((element) => offscreen.observe(element));
+
+  // One statement lights up word by word as it scrolls through the viewport (Morva).
+  function lightWords(element) {
+    if (!element) return;
+    const walker = document.createTreeWalker(element, NodeFilter.SHOW_TEXT);
+    const nodes = [];
+    while (walker.nextNode()) nodes.push(walker.currentNode);
+    const words = [];
+    for (const node of nodes) {
+      const fragment = document.createDocumentFragment();
+      for (const part of node.textContent.split(/(\s+)/)) {
+        if (!part || /^\s+$/.test(part)) { fragment.append(document.createTextNode(part)); continue; }
+        const word = document.createElement('span');
+        word.className = 'motion-lit-word';
+        word.textContent = part;
+        fragment.append(word);
+        words.push(word);
+      }
+      node.replaceWith(fragment);
+    }
+    let visible = false, queued = false;
+    function paint() {
+      queued = false;
+      if (preference.matches) { words.forEach((word) => word.style.removeProperty('opacity')); return; }
+      const box = element.getBoundingClientRect();
+      // Starts lighting as the line enters the lower 85% of the screen, fully lit by 45%.
+      const progress = clamp((innerHeight * .85 - box.top) / (innerHeight * .4));
+      words.forEach((word, index) => {
+        const lit = clamp(progress * words.length - index);
+        word.style.opacity = String(.25 + .75 * lit);
+      });
+    }
+    const queue = () => { if (visible && !queued) { queued = true; requestAnimationFrame(paint); } };
+    new IntersectionObserver(([entry]) => { visible = entry.isIntersecting; queue(); }).observe(element);
+    addEventListener('scroll', queue, { passive: true });
+    addEventListener('resize', queue, { passive: true });
+    preference.addEventListener('change', () => { queued = false; paint(); });
+    paint();
+  }
+  lightWords(document.querySelector('#workspace .ws-heading p'));
 
   // CSS animations keep their place while the decorative region is offscreen.
   const visibility = new IntersectionObserver((entries) => {
@@ -188,7 +321,7 @@ const traces = lines.map((line) => {
   const path = source.cloneNode(false);
   path.removeAttribute('id');
   path.setAttribute('fill', 'none');
-  path.setAttribute('stroke', 'var(--brand-logo-light, #F9B54D)');
+  path.setAttribute('stroke', 'var(--brand-logo-light, #01ebfd)');
   path.setAttribute('stroke-width', '.7');
   path.setAttribute('stroke-linecap', 'round');
   path.setAttribute('stroke-linejoin', 'round');
@@ -246,51 +379,3 @@ addEventListener('scroll', schedule, { passive: true });
 addEventListener('resize', schedule, { passive: true });
 configure();
 
-// Pointer-driven hero grid. Its mask cuts out content before the retained blur.
-(() => {
-  const hero = document.querySelector('#hero');
-  const grid = hero?.querySelector('.hero-shimmer');
-  const highlight = grid?.querySelector('.shimmer-highlight');
-  if (!hero || !grid || !highlight) return;
-  const canHover = matchMedia('(hover:hover) and (pointer:fine)');
-  const protectedElements = [...hero.querySelectorAll('.hero-title,.hero-description,.framer-vocpb,.site-button.primary,.prompt-card,.framer-1uqwldy')];
-  let frame = 0, pointer = null;
-  function hide() { pointer = null; grid.classList.remove('is-hovered'); }
-  function updateMask() {
-    const bounds = grid.getBoundingClientRect();
-    const boxes = protectedElements.map(el => el.getBoundingClientRect()).filter(b => b.width && b.height);
-    if (!bounds.width || !boxes.length) return;
-    const left = Math.max(0, Math.min(...boxes.map(b => b.left - bounds.left)) - 24);
-    const right = Math.min(bounds.width, Math.max(...boxes.map(b => b.right - bounds.left)) + 24);
-    const top = Math.max(0, Math.min(...boxes.map(b => b.top - bounds.top)) - 24);
-    const bottom = Math.min(bounds.height, Math.max(...boxes.map(b => b.bottom - bounds.top)) + 24);
-    // Blur only the mask boundary; the expanded black rectangle remains opaque inside.
-    const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${bounds.width}" height="${bounds.height}" viewBox="0 0 ${bounds.width} ${bounds.height}"><defs><filter id="feather" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="8"/></filter><mask id="cut" maskUnits="userSpaceOnUse"><rect width="100%" height="100%" fill="white"/><rect x="${left}" y="${top}" width="${right-left}" height="${bottom-top}" rx="24" fill="black" filter="url(#feather)"/><rect x="${left+12}" y="${top+12}" width="${Math.max(0,right-left-24)}" height="${Math.max(0,bottom-top-24)}" fill="black"/></mask></defs><rect width="100%" height="100%" fill="white" mask="url(#cut)"/></svg>`;
-    const mask = `url("data:image/svg+xml,${encodeURIComponent(svg)}")`;
-    grid.style.maskImage = mask; grid.style.webkitMaskImage = mask;
-    grid.style.maskSize = '100% 100%'; grid.style.webkitMaskSize = '100% 100%';
-  }
-  function move(event) {
-    if (!canHover.matches || preference.matches || event.pointerType === 'touch') return hide();
-    pointer = {x:event.clientX,y:event.clientY};
-    if (frame) return;
-    frame = requestAnimationFrame(() => {
-      frame = 0;
-      if (!pointer) return;
-      const b = grid.getBoundingClientRect();
-      highlight.style.transform = `translate(${pointer.x-b.left-180}px,${pointer.y-b.top-180}px)`;
-      grid.classList.add('is-hovered');
-    });
-  }
-  hero.addEventListener('pointermove',move,{passive:true});
-  hero.addEventListener('pointerleave',hide);
-  window.addEventListener('blur',hide);
-  window.addEventListener('scroll',hide,{passive:true});
-  document.addEventListener('visibilitychange',()=>{if(document.hidden)hide();});
-  canHover.addEventListener('change',hide); preference.addEventListener('change',hide);
-  const observer = new ResizeObserver(updateMask);
-  observer.observe(hero); protectedElements.forEach(el => observer.observe(el));
-  window.addEventListener('resize',()=>{hide();updateMask();});
-  document.fonts?.ready.then(updateMask);
-  updateMask();
-})();

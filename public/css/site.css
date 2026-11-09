@@ -33,7 +33,7 @@ html.light .site-brand, html.light .site-brand:hover { color: rgb(6, 5, 4); }
 .icon-button:hover { background: var(--bg-card-hover); }
 .menu-toggle { display: none; }
 .site-button { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 46px; padding: 10px 22px; border-radius: 999px; text-decoration: none; font-size: 14px; font-weight: 600; border: 1px solid transparent; transition: background .18s, box-shadow .18s; }
-.site-button.primary, .prompt-submit { background: linear-gradient(180deg, var(--palette-emphasis), var(--palette-emphasis)); color: #10232e; }
+.site-button.primary, .prompt-submit { background: linear-gradient(180deg, var(--palette-emphasis), var(--palette-emphasis)); color: #03222a; }
 .site-button.primary:hover, .prompt-submit:hover { box-shadow: 0 0 24px color-mix(in srgb,var(--palette-emphasis) 20.7843%,transparent); filter: brightness(1.08); }
 .site-button.secondary { background: var(--bg-sidebar); border-color: var(--border-medium); color: var(--text-primary); }
 .site-button.secondary:hover { background: var(--bg-card-hover); }
@@ -105,37 +105,7 @@ html.light .site-brand, html.light .site-brand:hover { color: rgb(6, 5, 4); }
 #why .benefit-icon, #why .benefit-icon path { fill: none !important; stroke: var(--brand-logo-light) !important; }
 #why [data-framer-name$="Copy"] p { font-size: 14px !important; line-height: 1.6 !important; }
 #why [data-framer-name$="Copy"]>div:first-child p { font-size: 18px !important; }
-#pricing { height: auto !important; padding: 80px 24px !important; }
-.pricing-wrapper { width: 100%; max-width: 1040px; margin: auto; }
-.section-intro { max-width: 680px; margin: 0 auto 44px; text-align: center; }
-.section-intro h2 { font: 500 clamp(32px,4vw,48px)/1.15 'Bricolage Grotesque', sans-serif; letter-spacing: -.025em; color: var(--text-primary); }
-.section-intro p { margin-top: 16px; color: var(--text-secondary); }
 .section-wordmark { font: 700 30px/1 'Bricolage Grotesque', Inter, sans-serif; color: var(--brand-logo-light); }
-.free-plan { display: flex; justify-content: space-between; align-items: center; gap: 24px; padding: 24px 30px; margin-bottom: 24px; border: 1px solid var(--border-medium); border-radius: 20px; background: linear-gradient(105deg, color-mix(in srgb,var(--palette-emphasis) 5.098%,transparent), transparent 70%), var(--bg-card); }
-.free-plan h3 { font: 500 23px/1.3 'Bricolage Grotesque', Inter, sans-serif; margin: 10px 0 6px; }
-.free-plan p { color: var(--text-secondary); font-size: 14px; }
-.free-plan .site-button { flex-shrink: 0; }
-.pricing-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 28px; }
-.pricing-card { display: flex; flex-direction: column; min-width: 0; padding: 32px; background: var(--bg-card); border: 1px solid var(--border-medium); border-radius: 20px; box-shadow: 0 4px 20px #0000000a; }
-.pricing-card.agency-card { border-color: var(--palette-emphasis); box-shadow: 0 4px 20px #00000012,0 0 20px color-mix(in srgb,var(--palette-emphasis) 10.1961%,transparent); }
-.plan-heading { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
-.plan-heading h3 { font: 600 26px/1.2 'Bricolage Grotesque', Inter, sans-serif; }
-.plan-badge { font-size: 12px; color: var(--brand-logo-light); background: color-mix(in srgb,var(--palette-emphasis) 10.9804%,transparent); padding: 3px 9px; border-radius: 999px; }
-.plan-description { font-size: 14px; color: var(--text-secondary); min-height: 46px; margin-top: 6px; }
-.plan-price { display: flex; align-items: baseline; gap: 7px; margin-top: 24px; }
-[data-price] { font-size: 48px; font-weight: 650; line-height: 1.1; letter-spacing: -.035em; }
-[data-cadence], [data-billing] { color: var(--text-secondary); font-size: 14px; }
-[data-billing] { margin-top: 10px; min-height: 44px; }
-.tier-caption { color: var(--text-muted); text-align: center; font-size: 12px; margin-top: 8px; }
-.plan-credits { font-size: 16px; font-weight: 600; margin-top: 20px; border-top: 1px solid var(--border-medium); padding-top: 18px; }
-.tier-options { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 16px; padding: 4px; background: var(--bg-sidebar); border-radius: 12px; }
-.tier-options button { flex: 1 1 auto; font-size: 13px; min-height: 44px; padding: 8px 6px; border: 1px solid transparent; border-radius: 9px; color: var(--text-secondary); background: transparent; white-space: nowrap; }
-.tier-options button[aria-pressed="true"] { background: var(--bg-popover); color: var(--text-primary); border-color: var(--border-accent); }
-.agency-card .tier-options button[aria-pressed="true"] { background: var(--palette-support); color: #fff; }
-.plan-benefits { list-style: none; padding: 0; display: grid; gap: 14px; margin: 28px 0 32px; }
-.plan-benefits li { position: relative; padding-left: 24px; font-size: 14px; line-height: 1.5; color: var(--text-secondary); }
-.pricing-card>.site-button { margin-top: auto; width: 100%; }
-.pricing-note { text-align: center; margin: 28px 0 0; font-size: 14px; color: var(--text-secondary); line-height: 1.8; }
 .faq-description { color: var(--text-secondary); font-size: 16px; line-height: 1.7; }
 .faq-item { width: 100%; border: 1px solid var(--border-subtle); border-radius: 14px; background: var(--bg-card); }
 .faq-item summary { list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 18px; cursor: pointer; padding: 20px 22px; font-size: 16px; line-height: 1.5; font-weight: 500; }
@@ -193,11 +163,6 @@ html.light .site-brand, html.light .site-brand:hover { color: rgb(6, 5, 4); }
   .workflow-code { display: none; }
   #diagram-section .workflow-description { font-size: 10px !important; line-height: 14px !important; }
   #made .framer-6ryx89 { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 24px; }
-  #pricing { padding: 56px 20px !important; }
-  .pricing-grid { grid-template-columns: minmax(0,1fr); gap: 24px; }
-  .pricing-card { padding: 26px 22px; border-radius: 24px; }
-  .free-plan { align-items: flex-start; flex-direction: column; gap: 18px; padding: 24px 22px; }
-  .free-plan .site-button { width: 100%; }
   .section-wordmark { font-size: 25px; }
   #made .framer-19zea0l, #made .framer-11wc7iu, #why .framer-4my6fz { width: 100%; overflow: visible; }
   #made .framer-11wc7iu, #why .framer-4my6fz { flex-wrap: wrap; gap: 10px; }
@@ -205,7 +170,6 @@ html.light .site-brand, html.light .site-brand:hover { color: rgb(6, 5, 4); }
   #made .framer-11wc7iu h2, #why .framer-4my6fz h2 { font-size: 28px !important; }
   #made .framer-11wc7iu .section-wordmark, #why .framer-4my6fz .section-wordmark { font-size: 22px; }
   #made .framer-11wc7iu .framer-1kvuw5w, #why .framer-4my6fz .framer-1kvuw5w { width: 32px !important; height: 32px !important; }
-  .plan-description { min-height: 0; }
   .site-footer { padding: 48px 24px 24px; }
   .footer-top, .footer-bottom { flex-direction: column; gap: 28px; }
   .footer-top nav { grid-template-columns: 1fr 1fr; gap: 16px; }
@@ -234,18 +198,7 @@ html.light .site-brand, html.light .site-brand:hover { color: rgb(6, 5, 4); }
   text-align: center !important;
 }
 
-/* Warm the static robot without filtering the independent WebGL head. */
-#diagram-section .workflow-robot-static { filter: saturate(0.3) sepia(0.14) brightness(1.03); }
 .arrow-icon { display: inline-block; width: 1em; height: 1em; flex: none; vertical-align: -0.125em; }
 .legal-back { align-items: center; }
 
 .site-icon{display:inline-block;width:1em;height:1em;vertical-align:-.125em;flex:none}
-.plan-credits[data-credits]{display:flex;align-items:center;gap:8px}
-.plan-benefits li::before{content:none}
-.benefit-check{position:absolute;left:0;top:3px;width:16px;height:16px;color:var(--success)}
-.pricing-card.agency-card{position:relative;isolation:isolate;background:linear-gradient(225deg,rgba(209,254,23,.16) 0%,rgba(209,254,23,.08) 28%,rgba(209,254,23,0) 62%),var(--bg-card)}
-.agency-card::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:1px;background:linear-gradient(rgba(255,255,255,.15) 0%,rgba(255,255,255,.09) 18%,rgba(255,255,255,.03) 38%,transparent 72%);mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);mask-composite:exclude;-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;pointer-events:none;z-index:-1}
-.solo-card .tier-options button[aria-pressed="true"]{border-color:transparent}
-html.dark .agency-card .tier-options button[aria-pressed="true"]{background:#141A16;color:#fff}
-html.light .agency-card .tier-options button[aria-pressed="true"]{background:#E2E6DB;color:#10261A}
-.tier-options button:focus-visible{outline:2px solid var(--border-focus);outline-offset:2px}

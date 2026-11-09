@@ -1,0 +1,13 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "tellarchi-site",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["server.mjs", "4175"],
+      "port": 4175,
+      "url": "http://127.0.0.1:4175",
+      "autoPort": false
+    }
+  ]
+}

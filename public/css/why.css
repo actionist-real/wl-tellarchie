@@ -1,4 +1,4 @@
-/* Super Intelligence Coder benefit stories. All rules stay inside this section. */
+/* Tell Archi benefit stories. All rules stay inside this section. */
 .why-section { isolation: isolate; }
 .why-section .section-heading { display: grid; grid-template-columns: minmax(0,1fr) minmax(260px,400px); align-items: end; gap: 32px; margin-bottom: 44px; }
 .why-section .section-heading h2 { max-width: 680px; }
@@ -114,3 +114,28 @@ html.light .why-section .why-desktop,html.light .why-section .why-phone { box-sh
 .why-section .why-history-spine { position: absolute; top: 35px; bottom: 49px; left: 46.5px; width: 2px; height: calc(100% - 84px); color: var(--brand-logo-light); opacity: .6; }
 @keyframes why-marching-ants { from { stroke-dashoffset: 0; } to { stroke-dashoffset: -8; } }
 @media (prefers-reduced-motion: reduce) { .why-section .why-connector { animation: none; stroke-dashoffset: 0; } }
+
+/* Neutral surfaces: no teal glows or shadows. */
+.why-section .benefit-surface { background:var(--bg-card); }
+.why-section .benefit-surface:hover { border-color:var(--border-subtle); box-shadow:none; }
+.why-section .why-visual,html.light .why-section .why-visual { background:none; }
+.why-section .why-next-prompt,.why-section .why-project-node { border-color:var(--border-medium); box-shadow:none; }
+.why-section .why-version.latest>i { border-color:var(--border-strong); box-shadow:none; }
+.why-section .why-version.latest>div { border-color:var(--border-medium); background:var(--bg-card); }
+/* Teal badge, same look as the pricing promo badge: pill, teal text on a soft teal tint, no border. */
+.why-section .why-plan-label { padding:4px 10px; border:0; border-radius:999px; font:500 12px/1.4 Inter,sans-serif; color:var(--brand-logo-light); background:color-mix(in srgb,var(--palette-emphasis) 12%,transparent); }
+
+/* Border beam on hover (after Klyv's BorderBeam, as CSS): a lit arc travels round the card's edge. */
+@property --beam-angle { syntax:'<angle>'; inherits:false; initial-value:0deg; }
+.why-section .benefit-surface::after { content:""; position:absolute; inset:0; z-index:3; padding:1.5px; border-radius:inherit; pointer-events:none;
+  background:conic-gradient(from var(--beam-angle),transparent 0deg,var(--palette-support) 47deg,var(--palette-ink) 79deg,transparent 80deg);
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0); -webkit-mask-composite:xor; mask-composite:exclude;
+  opacity:0; transition:opacity .5s ease; animation:why-beam 5s linear infinite paused; }
+.why-section .benefit-card:nth-child(2n) .benefit-surface::after { animation-delay:-2.5s; }
+.why-section .benefit-surface:hover::after,.why-section .benefit-card:focus-within .benefit-surface::after { opacity:1; animation-play-state:running; }
+@keyframes why-beam { to { --beam-angle:360deg; } }
+@media (prefers-reduced-motion:reduce) { .why-section .benefit-surface::after { animation:none; } }
+.why-section .why-next-prompt,.why-section .why-project-node { background:var(--bg-card); }
+
+/* Pause the loop while the section is offscreen (class set by js/motion.js). */
+#why.is-offscreen .why-connector { animation-play-state:paused; }
